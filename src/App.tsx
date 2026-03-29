@@ -24,7 +24,10 @@ import {
   Stethoscope,
   PenTool,
   Shield,
-  Video
+  Video,
+  Receipt,
+  BanknoteArrowDown,
+  HandCoins
 } from 'lucide-react';
 
 export default function App() {
@@ -104,12 +107,12 @@ function HeroSection() {
           
           {/* Floating Elements */}
           <motion.div
-            className="absolute -right-6 top-1/4 glass-card p-4 flex items-center gap-3"
+            className="absolute -right-6 top-2/4 glass-card p-4 flex items-center gap-3"
             animate={{ y: [0, -15, 0] }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
           >
-            <div className="w-10 h-10 rounded-full bg-green-400/20 flex items-center justify-center">
-              <TrendingUp className="text-green-400 w-5 h-5" />
+            <div className="w-10 h-10 rounded-full bg-blue-400/20 flex items-center justify-center">
+              <TrendingUp className="text-blue-400 w-5 h-5" />
             </div>
             <div>
               <p className="text-xs text-white/60 font-medium">Novos Seguidores</p>
@@ -122,12 +125,40 @@ function HeroSection() {
             animate={{ y: [0, 15, 0] }}
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
           >
-            <div className="w-10 h-10 rounded-full bg-yellow-400/20 flex items-center justify-center">
-              <MessageCircle className="text-yellow-400 w-5 h-5" />
+            <div className="w-10 h-10 rounded-full bg-green-400/20 flex items-center justify-center">
+              <BanknoteArrowDown className="text-green-400 w-5 h-5" />
             </div>
             <div>
-              <p className="text-xs text-white/60 font-medium">Novo Agendamento</p>
-              <p className="text-sm font-bold">Via Direct agora</p>
+              <p className="text-xs text-white/60 font-medium">PIX Recebido</p>
+              <p className="text-sm font-bold">R$ 300,00</p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="absolute -left-6 bottom-6/7 glass-card p-4 flex items-center gap-3"
+            animate={{ y: [0, 15, 0] }}
+            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+          >
+            <div className="w-10 h-10 rounded-full bg-green-400/20 flex items-center justify-center">
+              <BanknoteArrowDown className="text-green-400 w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-xs text-white/60 font-medium">Compra efetuada</p>
+              <p className="text-sm font-bold">R$ 236,47</p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="absolute -right-6 bottom-1/8 glass-card p-4 flex items-center gap-3"
+            animate={{ y: [0, 15, 0] }}
+            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+          >
+            <div className="w-10 h-10 rounded-full bg-yellow-400/20 flex items-center justify-center">
+              <Receipt className="text-yellow-400 w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-xs text-white/60 font-medium">Compra agendada</p>
+              <p className="text-sm font-bold">R$ 434,50</p>
             </div>
           </motion.div>
         </div>
@@ -211,12 +242,12 @@ function AboutMethodSection() {
             />
             {/* Floating Elements (Agendamentos, Novos Seguidores) */}
             <motion.div
-              className="absolute -right-6 top-1/4 glass-card p-4 flex items-center gap-3"
+              className="absolute -right-6 top-3/4 glass-card p-4 flex items-center gap-3"
               animate={{ y: [0, -15, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
             >
-              <div className="w-10 h-10 rounded-full bg-green-400/20 flex items-center justify-center">
-                <TrendingUp className="text-green-400 w-5 h-5" />
+              <div className="w-10 h-10 rounded-full bg-blue-400/20 flex items-center justify-center">
+                <TrendingUp className="text-blue-400 w-5 h-5" />
               </div>
               <div>
                 <p className="text-xs text-white/60 font-medium">Novos Seguidores</p>
@@ -225,16 +256,30 @@ function AboutMethodSection() {
             </motion.div>
 
             <motion.div
-              className="absolute -left-6 bottom-1/4 glass-card p-4 flex items-center gap-3"
+              className="absolute -left-6 top-2/3 glass-card p-4 flex items-center gap-3"
+              animate={{ y: [0, -15, 0] }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+            >
+              <div className="w-10 h-10 rounded-full bg-green-400/20 flex items-center justify-center">
+                <BanknoteArrowDown className="text-green-400 w-5 h-5" />
+              </div>
+              <div>
+                <p className="text-xs text-white/60 font-medium">PIX Recebido</p>
+                <p className="text-sm font-bold">R$ 432,30</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="absolute -left-6 bottom-3/4 glass-card p-4 flex items-center gap-3"
               animate={{ y: [0, 15, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
             >
               <div className="w-10 h-10 rounded-full bg-yellow-400/20 flex items-center justify-center">
-                <MessageCircle className="text-yellow-400 w-5 h-5" />
+                <HandCoins className="text-yellow-400 w-5 h-5" />
               </div>
               <div>
-                <p className="text-xs text-white/60 font-medium">Agendamentos</p>
-                <p className="text-sm font-bold">3 novos hoje</p>
+                <p className="text-xs text-white/60 font-medium">Vendas</p>
+                <p className="text-sm font-bold">3 novas hoje</p>
               </div>
             </motion.div>
           </div>
@@ -529,7 +574,7 @@ function TargetAudienceSection() {
           <motion.div 
             key={idx}
             className="glass-card p-6 flex flex-col items-center text-center h-full hover:scale-105 transition-all duration-300 cursor-default"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1 }}
