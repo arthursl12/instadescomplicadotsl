@@ -56,10 +56,9 @@ function HeroSection() {
           <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-sm font-bold tracking-widest uppercase mb-6 text-white/80">
             [INSTA DESCOMPLICADO]
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.1] mb-6">
-            ALCANCE DE 1.055 A 3.028 NOVOS SEGUIDORES EM 4 SEMANAS{' '}
-            <span className="gradient-text">INTERESSADOS NO SEU SERVIÇO</span>{' '}
-            USANDO ESTA FÓRMULA COMPROVADA.
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-normal leading-[1.1] mb-6">
+            ALCANCE DE <span className="gradient-text">1.055 A 3.028 NOVOS SEGUIDORES</span> EM 4 SEMANAS{' '}
+            USANDO ESTA <span className="gradient-text">FÓRMULA COMPROVADA</span>.
           </h1>
           <p className="text-lg md:text-xl text-white/70 font-medium leading-relaxed mb-4 max-w-2xl mx-auto lg:mx-0">
             Conheça o método de "Conversão Automática" que transforma seu Instagram em uma máquina de agendamentos, sem precisar de dancinhas, sem investir em anúncios caros e sem ser escravo da criação de conteúdo.
