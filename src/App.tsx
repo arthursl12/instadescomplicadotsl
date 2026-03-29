@@ -1,0 +1,493 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import React, { useState } from 'react';
+import { motion } from 'motion/react';
+import {
+  CheckCircle2,
+  XCircle,
+  Rocket,
+  Play,
+  Target,
+  MessageCircle,
+  Instagram,
+  ChevronDown,
+  ShieldCheck,
+  Zap,
+  TrendingUp,
+  Users,
+  Star
+} from 'lucide-react';
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-[#050505] text-white selection:bg-[#9D50BB]/30">
+      {/* Nebula Background */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-screen"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/80 via-[#050505]/95 to-[#050505]"></div>
+      </div>
+
+      <div className="relative z-10">
+        <HeroSection />
+        <SocialProofSection />
+        <MechanismSection />
+        <ModulesSection />
+        <TargetAudienceSection />
+        <OfferSection />
+        <FAQSection />
+        <Footer />
+      </div>
+    </div>
+  );
+}
+
+function HeroSection() {
+  return (
+    <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+      <div className="flex-1 text-center lg:text-left">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-sm font-bold tracking-widest uppercase mb-6 text-white/80">
+            [INSTA DESCOMPLICADO]
+          </span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.1] mb-6">
+            ALCANCE DE 1.055 A 3.028 NOVOS SEGUIDORES EM 4 SEMANAS{' '}
+            <span className="gradient-text">INTERESSADOS NO SEU SERVIÇO</span>{' '}
+            USANDO ESTA FÓRMULA COMPROVADA.
+          </h1>
+          <p className="text-lg md:text-xl text-white/70 font-medium leading-relaxed mb-4 max-w-2xl mx-auto lg:mx-0">
+            Conheça o método de "Conversão Automática" que transforma seu Instagram em uma máquina de agendamentos, sem precisar de dancinhas, sem investir em anúncios caros e sem ser escravo da criação de conteúdo.
+          </p>
+          <p className="text-base md:text-lg text-white/60 font-medium leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0">
+            Para profissionais que estão cansadas de postar "diquinhas" e querem um perfil lucrativo que venda sozinho.
+          </p>
+
+          <motion.a
+            href="#oferta"
+            className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-5 text-lg cta-gradient animate-pulse"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            QUERO MEU PERFIL LUCRATIVO AGORA
+            <Zap className="ml-2 w-5 h-5" />
+          </motion.a>
+        </motion.div>
+      </div>
+
+      <motion.div
+        className="flex-1 relative w-full max-w-md lg:max-w-lg"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <div className="relative rounded-[2.5rem] p-2 bg-gradient-to-br from-white/20 to-white/5 border border-white/10 shadow-2xl">
+          <img
+            src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop"
+            alt="Instagram Profile Mockup"
+            className="rounded-[2rem] w-full object-cover aspect-[9/16]"
+            referrerPolicy="no-referrer"
+          />
+          
+          {/* Floating Elements */}
+          <motion.div
+            className="absolute -right-6 top-1/4 glass-card p-4 flex items-center gap-3"
+            animate={{ y: [0, -15, 0] }}
+            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+          >
+            <div className="w-10 h-10 rounded-full bg-green-400/20 flex items-center justify-center">
+              <TrendingUp className="text-green-400 w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-xs text-white/60 font-medium">Novos Seguidores</p>
+              <p className="text-sm font-bold">+1.245 esta semana</p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="absolute -left-6 bottom-1/4 glass-card p-4 flex items-center gap-3"
+            animate={{ y: [0, 15, 0] }}
+            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+          >
+            <div className="w-10 h-10 rounded-full bg-yellow-400/20 flex items-center justify-center">
+              <MessageCircle className="text-yellow-400 w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-xs text-white/60 font-medium">Novo Agendamento</p>
+              <p className="text-sm font-bold">Via Direct agora</p>
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
+  );
+}
+
+function SocialProofSection() {
+  return (
+    <section className="py-20 px-6 max-w-7xl mx-auto">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
+          O que acontece quando você para de postar 'diquinhas' e aplica o método...
+        </h2>
+        <p className="text-white/60 text-lg">
+          Resultados reais de quem saiu da confusão do algoritmo para o lucro real.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[1, 2, 3].map((i) => (
+          <motion.div
+            key={i}
+            className="glass-card p-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+          >
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 overflow-hidden">
+                <img src={`https://picsum.photos/seed/user${i}/100/100`} alt="User" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              </div>
+              <div>
+                <p className="font-bold">Aluna Essentia</p>
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, j) => <Star key={j} className="w-3 h-3 fill-current" />)}
+                </div>
+              </div>
+            </div>
+            <p className="text-white/80 text-sm leading-relaxed italic">
+              "Eu passava horas no Canva fazendo posts que ninguém comentava. Depois que apliquei a Arquitetura de Conversão, meu Direct não para. Fechei 5 novos pacotes só essa semana!"
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function MechanismSection() {
+  return (
+    <section className="py-20 px-6 max-w-7xl mx-auto">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
+          Por que o seu Instagram atual não vende?
+        </h2>
+        <p className="text-white/60 text-lg">
+          Entenda a diferença entre ser escravo do algoritmo e ter uma máquina de vendas.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Jeito Errado */}
+        <motion.div
+          className="glass-card p-8 border-red-500/20 relative overflow-hidden"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+        >
+          <div className="absolute top-0 left-0 w-full h-1 bg-red-500/50"></div>
+          <h3 className="text-2xl font-bold mb-6 flex items-center gap-3 text-white/90">
+            <XCircle className="text-red-500 w-8 h-8" />
+            O Jeito Errado (O Problema)
+          </h3>
+          <ul className="space-y-6">
+            <li className="flex items-start gap-4">
+              <div className="mt-1 min-w-[24px]"><XCircle className="text-red-500/70 w-6 h-6" /></div>
+              <p className="text-white/70">Tentar entender o algoritmo e atrair apenas curiosos que nunca compram.</p>
+            </li>
+            <li className="flex items-start gap-4">
+              <div className="mt-1 min-w-[24px]"><XCircle className="text-red-500/70 w-6 h-6" /></div>
+              <p className="text-white/70">Gastar horas no Canva criando artes complexas que ninguém vê.</p>
+            </li>
+            <li className="flex items-start gap-4">
+              <div className="mt-1 min-w-[24px]"><XCircle className="text-red-500/70 w-6 h-6" /></div>
+              <p className="text-white/70">Ser refém de agências que entregam "posts bonitinhos", mas zero lucro.</p>
+            </li>
+          </ul>
+        </motion.div>
+
+        {/* Jeito Certo */}
+        <motion.div
+          className="glass-card p-8 border-[#9D50BB]/50 relative overflow-hidden shadow-[0_0_30px_rgba(157,80,187,0.15)]"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+        >
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#00D2FF] to-[#9D50BB]"></div>
+          <h3 className="text-2xl font-bold mb-6 flex items-center gap-3 text-white">
+            <CheckCircle2 className="text-green-400 w-8 h-8" />
+            A Solução (O Mecanismo)
+          </h3>
+          <p className="text-[#00D2FF] font-bold mb-6">Apresentamos a Arquitetura de Conversão Automática</p>
+          <ul className="space-y-6">
+            <li className="flex items-start gap-4">
+              <div className="mt-1 min-w-[24px]"><CheckCircle2 className="text-green-400 w-6 h-6" /></div>
+              <div>
+                <strong className="block text-white mb-1">Foco em Intenção de Compra:</strong>
+                <p className="text-white/70">Não buscamos curtidas vazias, mas seguidores que já querem seu serviço.</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-4">
+              <div className="mt-1 min-w-[24px]"><CheckCircle2 className="text-green-400 w-6 h-6" /></div>
+              <div>
+                <strong className="block text-white mb-1">Efeito Bola de Neve:</strong>
+                <p className="text-white/70">O algoritmo passa a trabalhar para você, não o contrário.</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-4">
+              <div className="mt-1 min-w-[24px]"><CheckCircle2 className="text-green-400 w-6 h-6" /></div>
+              <div>
+                <strong className="block text-white mb-1">Método Copie e Cole:</strong>
+                <p className="text-white/70">Esqueça a criação do zero; use o que já foi validado.</p>
+              </div>
+            </li>
+          </ul>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function ModulesSection() {
+  const modules = [
+    {
+      icon: <Target className="w-8 h-8 text-[#00D2FF]" />,
+      title: "Bio Irresistível",
+      desc: "Configure seu perfil para converter visitantes em clientes em segundos."
+    },
+    {
+      icon: <Play className="w-8 h-8 text-[#9D50BB]" />,
+      title: "Destaques Estratégicos",
+      desc: "Crie uma trilha de vendas que trabalha 24h por dia para você."
+    },
+    {
+      icon: <Instagram className="w-8 h-8 text-yellow-400" />,
+      title: "Feed com Intenção",
+      desc: "Aprenda a postar conteúdos que geram desejo imediato pelo seu serviço."
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8 text-green-400" />,
+      title: "O Script do Direct",
+      desc: "Como levar o seguidor do feed para o WhatsApp de forma automática."
+    }
+  ];
+
+  return (
+    <section className="py-20 px-6 max-w-7xl mx-auto">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
+          O que você vai aprender
+        </h2>
+        <p className="text-white/60 text-lg">
+          O passo a passo exato para transformar seu perfil.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {modules.map((mod, idx) => (
+          <motion.div
+            key={idx}
+            className="glass-card p-8 hover:bg-white/5 transition-colors duration-300 group cursor-default"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: idx * 0.1 }}
+          >
+            <div className="mb-6 p-4 rounded-2xl bg-white/5 inline-block group-hover:scale-110 transition-transform duration-300">
+              {mod.icon}
+            </div>
+            <h3 className="text-xl font-bold mb-3">Módulo 0{idx + 1}: {mod.title}</h3>
+            <p className="text-white/60 leading-relaxed">{mod.desc}</p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function TargetAudienceSection() {
+  return (
+    <section className="py-20 px-6 max-w-4xl mx-auto text-center">
+      <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-12">
+        Para quem é o Insta Descomplicado?
+      </h2>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+        {[
+          { title: "Profissionais Liberais", desc: "Que precisam de agendamentos reais, não apenas seguidores." },
+          { title: "Donas de Clínicas", desc: "Que querem destravar o faturamento através do digital." },
+          { title: "Viciadas em Conteúdo", desc: "Que estão exaustas de criar posts que não vendem." },
+          { title: "Iniciantes", desc: "Que possuem apenas o celular e pouco tempo disponível." }
+        ].map((item, idx) => (
+          <motion.div 
+            key={idx}
+            className="glass-card p-6 flex items-start gap-4"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+          >
+            <Users className="w-6 h-6 text-[#00D2FF] shrink-0 mt-1" />
+            <div>
+              <h4 className="font-bold text-lg mb-1">{item.title}</h4>
+              <p className="text-white/60 text-sm">{item.desc}</p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function OfferSection() {
+  return (
+    <section id="oferta" className="py-24 px-6 max-w-4xl mx-auto">
+      <motion.div 
+        className="glass-card p-8 md:p-12 border-[#00D2FF]/30 relative overflow-hidden text-center"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#00D2FF] to-[#9D50BB]"></div>
+        
+        <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-8">
+          O que você recebe hoje:
+        </h2>
+
+        <div className="space-y-4 mb-10 text-left max-w-xl mx-auto">
+          <div className="flex justify-between items-center pb-4 border-b border-white/10">
+            <span className="font-medium flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5 text-green-400" />
+              Método Completo Insta Descomplicado
+            </span>
+            <span className="text-white/40 line-through">R$ 297</span>
+          </div>
+          <div className="flex justify-between items-center pb-4 border-b border-white/10">
+            <span className="font-medium flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5 text-green-400" />
+              Arquitetura de Conversão Automática
+            </span>
+            <span className="text-white/40 line-through">R$ 197</span>
+          </div>
+          <div className="flex justify-between items-center pb-4 border-b border-white/10">
+            <span className="font-medium flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5 text-green-400" />
+              Acesso Imediato à Área de Membros
+            </span>
+            <span className="text-green-400 font-bold">Incluso</span>
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <p className="text-white/60 mb-2">Tudo isso valeria R$ 494,00...</p>
+          <p className="text-xl font-medium mb-2">Preço Especial Hoje:</p>
+          <div className="text-5xl md:text-7xl font-black tracking-tighter gradient-text mb-4">
+            12x R$ 10,00
+          </div>
+          <p className="text-white/80">ou apenas R$ 97,00 à vista</p>
+        </div>
+
+        <motion.button
+          className="w-full md:w-auto px-10 py-6 text-xl cta-gradient animate-pulse mx-auto flex items-center justify-center gap-3"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          SIM! QUERO ACESSO IMEDIATO POR R$ 97
+          <Rocket className="w-6 h-6" />
+        </motion.button>
+        
+        <div className="mt-8 flex items-center justify-center gap-2 text-white/50 text-sm">
+          <ShieldCheck className="w-4 h-4" />
+          Compra 100% Segura e Acesso Imediato
+        </div>
+      </motion.div>
+    </section>
+  );
+}
+
+function FAQSection() {
+  const faqs = [
+    {
+      q: "Preciso de computador?",
+      a: "Não, o método é focado em usar apenas o celular."
+    },
+    {
+      q: "Tenho pouco tempo, serve para mim?",
+      a: "Sim, o método é 'pronto para copiar e colar', feito para quem não tem tempo a perder."
+    },
+    {
+      q: "Como recebo o acesso?",
+      a: "Imediatamente após a compra no seu e-mail, via plataforma Essentia."
+    },
+    {
+      q: "Preciso fazer dancinhas?",
+      a: "Absolutamente não. O foco é conversão técnica, não exposição ridícula."
+    }
+  ];
+
+  return (
+    <section className="py-20 px-6 max-w-3xl mx-auto">
+      <div className="glass-card p-8 mb-16 text-center border-green-400/30">
+        <ShieldCheck className="w-12 h-12 text-green-400 mx-auto mb-4" />
+        <h3 className="text-2xl font-bold mb-2">7 Dias de Garantia Incondicional</h3>
+        <p className="text-white/70">
+          Teste o método de "copiar e colar" e veja os primeiros seguidores qualificados em menos de 7 dias. Satisfação garantida ou seu dinheiro de volta.
+        </p>
+      </div>
+
+      <h2 className="text-3xl font-black tracking-tighter mb-8 text-center">
+        Perguntas Frequentes
+      </h2>
+
+      <div className="space-y-4">
+        {faqs.map((faq, idx) => (
+          <FAQItem key={idx} question={faq.q} answer={faq.a} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+const FAQItem: React.FC<{ question: string, answer: string }> = ({ question, answer }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border border-white/10 rounded-2xl overflow-hidden bg-white/[0.02]">
+      <button
+        className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span className="font-bold text-lg">{question}</span>
+        <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+      <motion.div
+        initial={false}
+        animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
+        className="overflow-hidden"
+      >
+        <div className="px-6 pb-5 text-white/60 leading-relaxed">
+          {answer}
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+function Footer() {
+  return (
+    <footer className="py-10 text-center border-t border-white/10 mt-20">
+      <div className="flex justify-center gap-6 mb-6 text-sm text-white/40">
+        <a href="#" className="hover:text-white transition-colors">Políticas de Privacidade</a>
+        <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
+      </div>
+      <p className="text-white/30 text-sm">
+        Copyright © 2026 – Insta Descomplicado.
+      </p>
+    </footer>
+  );
+}
