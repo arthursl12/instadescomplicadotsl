@@ -204,9 +204,9 @@ function AboutMethodSection() {
           >
             {/* Placeholder for iPhone screen */}
             <img
-              src="https://images.unsplash.com/photo-1593642531647-8a70659a4b3d?q=80&w=800&auto=format&fit=crop" // Placeholder image for an optimized IG profile
+              src="static/sobre.jpeg"
               alt="iPhone Mockup - Optimized Instagram Profile"
-              className="rounded-[2rem] w-full object-cover aspect-[9/16]"
+              className="rounded-[2rem] w-full object-cover aspect-[3/4]"
               referrerPolicy="no-referrer"
             />
             {/* Floating Elements (Agendamentos, Novos Seguidores) */}
