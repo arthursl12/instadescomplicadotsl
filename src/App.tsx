@@ -18,7 +18,8 @@ import {
   Zap,
   TrendingUp,
   Users,
-  Star
+  Star,
+  Quote
 } from 'lucide-react';
 
 export default function App() {
@@ -35,6 +36,7 @@ export default function App() {
         <SocialProofSection />
         <AboutMethodSection />
         <ModulesSection />
+        <InstructorAuthoritySection />
         <MechanismSection />
         <TargetAudienceSection />
         <OfferSection />
@@ -257,6 +259,77 @@ function AboutMethodSection() {
             Sem essa arquitetura, você está apenas perdendo tempo e dinheiro no orgânico. Simples assim.
           </p>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function InstructorAuthoritySection() {
+  const differentials = [
+    { icon: <ShieldCheck className="w-6 h-6 text-green-400" />, text: "Experiência Prática: Estratégias validadas diariamente em contas de alto investimento." },
+    { icon: <Rocket className="w-6 h-6 text-[#00D2FF]" />, text: "Método Direto: Sem dancinhas, sem exposição ridícula e focado 100% em vendas." },
+    { icon: <TrendingUp className="w-6 h-6 text-yellow-400" />, text: "Suporte Estratégico: Conteúdo com o DNA de design e conversão da Essentia." },
+  ];
+
+  return (
+    <section className="relative py-20 px-6 max-w-7xl mx-auto">
+      <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-12">
+        {/* Image - Left Column */}
+        <motion.div
+          className="flex-1 relative w-full max-w-sm lg:max-w-md xl:max-w-lg -mb-20 lg:mb-0 z-20" // z-index for overlay
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="relative rounded-full overflow-hidden border-4 border-[#9D50BB] shadow-lg"
+               style={{ boxShadow: '0 0 40px rgba(157, 80, 187, 0.8)' }} // Glow effect
+          >
+            <img
+              src="https://images.unsplash.com/photo-1599566150163-29194d6b4890?q=80&w=800&auto=format&fit=crop" // Placeholder for Arthur's professional photo
+              alt="Arthur - Estrategista de Performance"
+              className="w-full h-auto object-cover"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+        </motion.div>
+
+        {/* Text Content - Right Column */}
+        <motion.div
+          className="flex-1 glass-card p-8 md:p-12 lg:pl-32 lg:-ml-20 z-10" // Negative margin to create overlap
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <h2 className="text-2xl md:text-2xl font-black leading-tight mb-6">
+            QUEM VAI TE GUIAR NA CONSTRUÇÃO DO SEU PERFIL DE 6 DÍGITOS?
+          </h2>
+          <h3 className="text-lg font-bold mb-4">
+            <span className="gradient-text">ARTHUR</span> | Estrategista de Performance & Mentor do Método
+          </h3>
+          <div className="relative glass-card p-6 pl-16 mb-6 border-l-4 border-[#00D2FF]"> {/* Added relative, pl-16, -ml-12 */}
+            <Quote className="absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 text-[#9D50BB]/60" /> {/* Big purple quote icon */}
+            <p className="text-sl text-white/70 font-medium italic leading-relaxed">
+              Esqueça as teorias rasas de quem nunca vendeu nada no Instagram. Eu sou o Arthur, estrategista na Essentia e especialista em 'hackear' algoritmos para gerar lucro real.
+            </p>
+          </div>
+          <p className="text-sl text-white/70 font-medium leading-relaxed mb-6">
+            Com mais de <span className="font-black">8 anos</span> de experiência no campo de batalha, eu não apenas estudo o Instagram; eu domino a lógica por trás do faturamento exponencial. Já ajudei centenas de negócios a saírem da "escravidão do conteúdo" para um modelo de Conversão Automática.
+          </p>
+          <p className="text-sl text-white/70 font-medium leading-relaxed mb-6">
+            Neste curso, eu vou abrir minhas operações e te entregar a estrutura que usamos aqui na agência. Você não vai apenas ganhar seguidores; você vai aprender a atrair de <span className="font-black">clientes</span> para o seu serviço em menos de 4 semanas.
+          </p>
+
+          <ul className="space-y-4 mb-8">
+            {differentials.map((item, idx) => (
+              <li key={idx} className="flex items-start gap-3">
+                {item.icon}
+                <p className="text-white/70 font-medium">{item.text}</p>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
       </div>
     </section>
   );
