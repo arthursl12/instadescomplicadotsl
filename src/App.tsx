@@ -34,8 +34,8 @@ export default function App() {
         <HeroSection />
         <SocialProofSection />
         <AboutMethodSection />
-        <MechanismSection />
         <ModulesSection />
+        <MechanismSection />
         <TargetAudienceSection />
         <OfferSection />
         <FAQSection />
