@@ -23,7 +23,8 @@ import {
   UserCheck,
   Stethoscope,
   PenTool,
-  Shield
+  Shield,
+  Video
 } from 'lucide-react';
 
 export default function App() {
@@ -43,6 +44,7 @@ export default function App() {
         <InstructorAuthoritySection />
         <MechanismSection />
         <TargetAudienceSection />
+        <BonusSection />
         <OfferSection />
         <FAQSection />
         <Footer />
@@ -544,6 +546,68 @@ function TargetAudienceSection() {
   );
 }
 
+function BonusSection() {
+  const bonuses = [
+    {
+      icon: <Video className="w-8 h-8" />,
+      title: "Roteiros Magnéticos de Reels",
+      originalPrice: "De R$ 147,00",
+      currentPrice: "R$ 0,00",
+      description: "Chega de travar na hora de gravar. Receba modelos de roteiros prontos para atrair seguidores qualificados e gerar desejo imediato pelo seu serviço."
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8" />,
+      title: "Comunidade Exclusiva no WhatsApp",
+      originalPrice: "De R$ 197,00",
+      currentPrice: "R$ 0,00",
+      description: "Você não estará sozinha. Tenha acesso ao nosso grupo exclusivo para networking, troca de estratégias com outras profissionais e suporte direto."
+    },
+  ];
+
+  return (
+    <section className="py-20 px-6 max-w-7xl mx-auto text-center">
+      <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
+        E TEM MAIS: LEVE 2 <span className="gradient-text">BÔNUS EXCLUSIVOS</span> AO SE INSCREVER HOJE
+      </h2>
+      <p className="text-white/60 text-lg mb-12">
+        Estes materiais foram criados para acelerar sua jornada rumo ao perfil de 6 dígitos.
+      </p>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {bonuses.map((bonus, idx) => (
+          <motion.div
+            key={idx}
+            className="glass-card p-8 relative flex flex-col items-center justify-between h-full animate-float" // Added animate-float
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: idx * 0.1 }}
+            whileHover={{ scale: 1.05 }}
+          >
+            {/* PRESENTE tag */}
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg rotate-3">
+              BÔNUS
+            </span>
+
+            <div className="flex flex-col items-center mb-6">
+              <div className="mb-4 p-3 rounded-full bg-white/10">
+                {React.cloneElement(bonus.icon, { className: `${bonus.icon.props.className} text-[#9D50BB]` })} {/* Apply purple color */}
+              </div>
+              <h3 className="text-2xl font-black mb-2 gradient-text">{bonus.title}</h3>
+              <p className="text-white/70 text-base leading-relaxed">{bonus.description}</p>
+            </div>
+
+            <div className="mt-auto"> {/* Aligns pricing to the bottom */}
+              <p className="text-white/40 line-through text-sm">{bonus.originalPrice}</p>
+              <p className="text-green-400 font-bold text-xl">{bonus.currentPrice}</p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function OfferSection() {
   return (
     <section id="oferta" className="py-24 px-6 max-w-4xl mx-auto">
@@ -574,17 +638,25 @@ function OfferSection() {
             </span>
             <span className="text-white/40 line-through">R$ 197</span>
           </div>
+
           <div className="flex justify-between items-center pb-4 border-b border-white/10">
             <span className="font-medium flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-green-400" />
-              Acesso Imediato à Área de Membros
+              BÔNUS 01: Roteiros Magnéticos de Reels
             </span>
-            <span className="text-green-400 font-bold">Incluso</span>
+            <span className="text-white/40 line-through">R$ 97</span>
+          </div>
+          <div className="flex justify-between items-center pb-4 border-b border-white/10">
+            <span className="font-medium flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5 text-green-400" />
+              BÔNUS 02: Comunidade Exclusiva no WhatsApp
+            </span>
+            <span className="text-white/40 line-through">R$ 197</span>
           </div>
         </div>
 
         <div className="mb-8">
-          <p className="text-white/60 mb-2">Tudo isso valeria R$ 494,00...</p>
+          <p className="text-white/60 mb-2">Tudo isso valeria R$ 788,00...</p>
           <p className="text-xl font-medium mb-2">Preço Especial Hoje:</p>
           <div className="text-5xl md:text-7xl font-black tracking-tighter gradient-text mb-4">
             12x R$ 10,00
@@ -622,7 +694,7 @@ function FAQSection() {
     },
     {
       q: "Como recebo o acesso?",
-      a: "Imediatamente após a compra no seu e-mail, via plataforma Essentia."
+      a: "Imediatamente após a compra no seu e-mail, via plataforma Kiwify."
     },
     {
       q: "Preciso fazer dancinhas?",

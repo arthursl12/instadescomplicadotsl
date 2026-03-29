@@ -18,6 +18,13 @@
   .cta-gradient {
     @apply bg-gradient-to-br from-[#00D2FF] to-[#9D50BB] text-white font-bold rounded-2xl transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(157,80,187,0.4)];
   }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
 }
 
 body {
