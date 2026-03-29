@@ -19,7 +19,11 @@ import {
   TrendingUp,
   Users,
   Star,
-  Quote
+  Quote,
+  UserCheck,
+  Stethoscope,
+  PenTool,
+  Shield
 } from 'lucide-react';
 
 export default function App() {
@@ -57,7 +61,7 @@ function HeroSection() {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-sm font-bold tracking-widest uppercase mb-6 text-white/80">
-            [INSTA DESCOMPLICADO]
+            INSTA DESCOMPLICADO
           </span>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-normal leading-[1.1] mb-6">
             ALCANCE DE <span className="gradient-text">1.055 A 3.028 NOVOS SEGUIDORES</span> EM 4 SEMANAS{' '}
@@ -237,7 +241,7 @@ function AboutMethodSection() {
         {/* Text Content - Right Column (Desktop) */}
         <div className="flex-1 glass-card p-8 md:p-12">
           <h2 className="text-2xl md:text-2xl font-black leading-tight mb-6">
-            SOBRE O MÉTODO INSTA DESCOMPLICADO
+            SOBRE O MÉTODO <span className="gradient-text">INSTA DESCOMPLICADO</span>
           </h2>
           <p className="text-sl text-white/70 font-medium leading-relaxed mb-6">
             O <span class="font-bold">Insta Descomplicado</span> não é apenas mais um curso de Instagram. É um método comprovado para profissionais que estão cansadas de postar "diquinhas" e querem um <span class="font-bold">perfil lucrativo</span> que venda sozinho. Enquanto outros focam em curtidas vazias, aqui você configura seu perfil para ser uma <span class="font-bold">máquina de vendas automática</span> usando apenas o seu celular.
@@ -446,7 +450,7 @@ function ModulesSection() {
     <section className="py-20 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
-          O que você vai aprender
+          O que você vai aprender no <span className="gradient-text">Insta Descomplicado</span>
         </h2>
         <p className="text-white/60 text-lg">
           O passo a passo exato para transformar seu perfil.
@@ -476,31 +480,63 @@ function ModulesSection() {
 }
 
 function TargetAudienceSection() {
+  const audienceCards = [
+    {
+      icon: <UserCheck className="w-8 h-8 text-[#9D50BB]" />,
+      title: "Profissionais Liberais",
+      copy: "Para quem está cansada de postar conteúdos que não convertem e deseja atrair clientes que pagam o valor que seu trabalho realmente merece."
+    },
+    {
+      icon: <Stethoscope className="w-8 h-8 text-[#9D50BB]" />,
+      title: "Donas de Clínicas de Estética",
+      copy: "Para quem precisa levar o seguidor do feed para o WhatsApp e destravar o faturamento da clínica através do digital."
+    },
+    {
+      icon: <PenTool className="w-8 h-8 text-[#9D50BB]" />,
+      title: "Criadores de Conteúdo",
+      copy: "Para quem gasta horas criando artes complexas que ninguém vê e busca um método simples focado no que você fala, não apenas no design."
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-[#9D50BB]" />,
+      title: "Iniciantes no Instagram",
+      copy: "Para quem quer ver os primeiros seguidores qualificados chegando em menos de 7 dias através de uma fórmula pronta para copiar e colar."
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-[#9D50BB]" />,
+      title: "Especialistas e Mentores",
+      copy: "Para quem deseja crescer com autoridade e estratégia, sem precisar de dancinhas ou exposição ridícula."
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8 text-[#9D50BB]" />,
+      title: "Empreendedores Locais",
+      copy: "Para quem quer dominar o tráfego orgânico, atrair seguidores que já querem o seu serviço e gerar o 'efeito bola de neve'."
+    }
+  ];
+
   return (
-    <section className="py-20 px-6 max-w-4xl mx-auto text-center">
-      <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-12">
-        Para quem é o Insta Descomplicado?
+    <section className="py-20 px-6 max-w-7xl mx-auto text-center">
+      <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
+        PARA QUEM É O <span className="gradient-text">INSTA DESCOMPLICADO</span>?
       </h2>
+      <p className="text-white/60 text-lg mb-12">
+        Um método rápido, validado e focado em agendamentos reais usando apenas o seu celular.
+      </p>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-        {[
-          { title: "Profissionais Liberais", desc: "Que precisam de agendamentos reais, não apenas seguidores." },
-          { title: "Clínicas de Estética", desc: "Que querem destravar o faturamento através do digital." },
-          { title: "Empresários Consolidados", desc: "Que estão exaustas de criar posts que não vendem." },
-          { title: "Iniciantes", desc: "Que possuem apenas o celular e pouco tempo disponível." }
-        ].map((item, idx) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {audienceCards.map((card, idx) => (
           <motion.div 
             key={idx}
-            className="glass-card p-6 flex items-start gap-4"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            className="glass-card p-6 flex flex-col items-center text-center h-full hover:scale-105 transition-all duration-300 cursor-default"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ delay: idx * 0.1 }}
           >
-            <Users className="w-6 h-6 text-[#00D2FF] shrink-0 mt-1" />
-            <div>
-              <h4 className="font-bold text-lg mb-1">{item.title}</h4>
-              <p className="text-white/60 text-sm">{item.desc}</p>
+            <div className="mb-4">
+              {card.icon}
             </div>
+            <h4 className="font-black text-xl mb-2">{card.title}</h4>
+            <p className="text-white/60 text-base leading-relaxed">{card.copy}</p>
           </motion.div>
         ))}
       </div>
@@ -520,7 +556,7 @@ function OfferSection() {
         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#00D2FF] to-[#9D50BB]"></div>
         
         <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-8">
-          O que você recebe hoje:
+          O que você <span className="gradient-text">recebe hoje</span>:
         </h2>
 
         <div className="space-y-4 mb-10 text-left max-w-xl mx-auto">
