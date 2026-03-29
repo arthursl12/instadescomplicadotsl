@@ -96,7 +96,7 @@ function HeroSection() {
       >
         <div className="relative rounded-[2.5rem] p-2 bg-gradient-to-br from-white/20 to-white/5 border border-white/10 shadow-2xl">
           <img
-            src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop"
+            src="static/hero2.jpeg"
             alt="Instagram Profile Mockup"
             className="rounded-[2rem] w-full object-cover aspect-[9/16]"
             referrerPolicy="no-referrer"
