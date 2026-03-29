@@ -358,20 +358,20 @@ function MechanismSection() {
           <div className="absolute top-0 left-0 w-full h-1 bg-red-500/50"></div>
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-3 text-white/90">
             <XCircle className="text-red-500 w-8 h-8" />
-            O Jeito Errado (O Problema)
+            Por que você não vende?
           </h3>
           <ul className="space-y-6">
             <li className="flex items-start gap-4">
               <div className="mt-1 min-w-[24px]"><XCircle className="text-red-500/70 w-6 h-6" /></div>
-              <p className="text-white/70">Tentar entender o algoritmo e atrair apenas curiosos que nunca compram.</p>
+              <p className="text-white/70">Tenta entender o algoritmo e atrair apenas curiosos que nunca compram.</p>
             </li>
             <li className="flex items-start gap-4">
               <div className="mt-1 min-w-[24px]"><XCircle className="text-red-500/70 w-6 h-6" /></div>
-              <p className="text-white/70">Gastar horas no Canva criando artes complexas que ninguém vê.</p>
+              <p className="text-white/70">Gasta horas no Canva criando artes complexas que ninguém vê.</p>
             </li>
             <li className="flex items-start gap-4">
               <div className="mt-1 min-w-[24px]"><XCircle className="text-red-500/70 w-6 h-6" /></div>
-              <p className="text-white/70">Ser refém de agências que entregam "posts bonitinhos", mas zero lucro.</p>
+              <p className="text-white/70">É refém de "posts editáveis" bonitinhos, mas zero lucro.</p>
             </li>
           </ul>
         </motion.div>
@@ -386,29 +386,29 @@ function MechanismSection() {
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#00D2FF] to-[#9D50BB]"></div>
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-3 text-white">
             <CheckCircle2 className="text-green-400 w-8 h-8" />
-            A Solução (O Mecanismo)
+            Com o Insta Descomplicado
           </h3>
-          <p className="text-[#00D2FF] font-bold mb-6">Apresentamos a Arquitetura de Conversão Automática</p>
+          {/* <p className="text-[#00D2FF] font-bold mb-6">Apresentamos a Arquitetura de Conversão Automática</p> */}
           <ul className="space-y-6">
             <li className="flex items-start gap-4">
               <div className="mt-1 min-w-[24px]"><CheckCircle2 className="text-green-400 w-6 h-6" /></div>
               <div>
-                <strong className="block text-white mb-1">Foco em Intenção de Compra:</strong>
-                <p className="text-white/70">Não buscamos curtidas vazias, mas seguidores que já querem seu serviço.</p>
+                
+                <p className="text-white/70"><strong className="text-white mb-1">Foco em Intenção de Compra:</strong> não buscamos curtidas vazias, mas seguidores que já querem seu serviço.</p>
               </div>
             </li>
             <li className="flex items-start gap-4">
               <div className="mt-1 min-w-[24px]"><CheckCircle2 className="text-green-400 w-6 h-6" /></div>
               <div>
-                <strong className="block text-white mb-1">Efeito Bola de Neve:</strong>
-                <p className="text-white/70">O algoritmo passa a trabalhar para você, não o contrário.</p>
+                
+                <p className="text-white/70"><strong className="text-white mb-1">Efeito Bola de Neve:</strong> o algoritmo passa a trabalhar para você, não o contrário.</p>
               </div>
             </li>
             <li className="flex items-start gap-4">
               <div className="mt-1 min-w-[24px]"><CheckCircle2 className="text-green-400 w-6 h-6" /></div>
               <div>
-                <strong className="block text-white mb-1">Método Copie e Cole:</strong>
-                <p className="text-white/70">Esqueça a criação do zero; use o que já foi validado.</p>
+                
+                <p className="text-white/70"><strong className="text-white mb-1">Copie e Cole:</strong> esqueça a criação do zero; use o que já foi validado.</p>
               </div>
             </li>
           </ul>
@@ -485,8 +485,8 @@ function TargetAudienceSection() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
         {[
           { title: "Profissionais Liberais", desc: "Que precisam de agendamentos reais, não apenas seguidores." },
-          { title: "Donas de Clínicas", desc: "Que querem destravar o faturamento através do digital." },
-          { title: "Viciadas em Conteúdo", desc: "Que estão exaustas de criar posts que não vendem." },
+          { title: "Clínicas de Estética", desc: "Que querem destravar o faturamento através do digital." },
+          { title: "Empresários Consolidados", desc: "Que estão exaustas de criar posts que não vendem." },
           { title: "Iniciantes", desc: "Que possuem apenas o celular e pouco tempo disponível." }
         ].map((item, idx) => (
           <motion.div 
