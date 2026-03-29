@@ -33,6 +33,7 @@ export default function App() {
       <div className="relative z-10">
         <HeroSection />
         <SocialProofSection />
+        <AboutMethodSection />
         <MechanismSection />
         <ModulesSection />
         <TargetAudienceSection />
@@ -165,6 +166,97 @@ function SocialProofSection() {
             </p>
           </motion.div>
         ))}
+      </div>
+    </section>
+  );
+}
+
+function AboutMethodSection() {
+  const objectionList = [
+    "Não importa se você tem poucos seguidores hoje.",
+    "Não importa se você odeia fazer dancinhas ou tendências ridículas.",
+    "Não importa se você não tem tempo para criar conteúdo complexo.",
+    "Não importa se você nunca investiu um centavo em anúncios caros.",
+    "Não importa sua frustração anterior com o algoritmo."
+  ];
+
+  return (
+    <section className="py-20 px-6 max-w-7xl mx-auto">
+      <div className="flex flex-col lg:flex-row items-center gap-12">
+        {/* Mockup Image - Left Column (Desktop) */}
+        <motion.div
+          className="flex-1 relative w-full max-w-md lg:max-w-lg"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="relative rounded-[2.5rem] p-2 bg-gradient-to-br from-white/20 to-white/5 border border-white/10 shadow-2xl"
+               style={{ boxShadow: '0 0 30px rgba(157, 80, 187, 0.6)' }} // Glow effect
+          >
+            {/* Placeholder for iPhone screen */}
+            <img
+              src="https://images.unsplash.com/photo-1593642531647-8a70659a4b3d?q=80&w=800&auto=format&fit=crop" // Placeholder image for an optimized IG profile
+              alt="iPhone Mockup - Optimized Instagram Profile"
+              className="rounded-[2rem] w-full object-cover aspect-[9/16]"
+              referrerPolicy="no-referrer"
+            />
+            {/* Floating Elements (Agendamentos, Novos Seguidores) */}
+            <motion.div
+              className="absolute -right-6 top-1/4 glass-card p-4 flex items-center gap-3"
+              animate={{ y: [0, -15, 0] }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+            >
+              <div className="w-10 h-10 rounded-full bg-green-400/20 flex items-center justify-center">
+                <TrendingUp className="text-green-400 w-5 h-5" />
+              </div>
+              <div>
+                <p className="text-xs text-white/60 font-medium">Novos Seguidores</p>
+                <p className="text-sm font-bold">+1.873 esta semana</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="absolute -left-6 bottom-1/4 glass-card p-4 flex items-center gap-3"
+              animate={{ y: [0, 15, 0] }}
+              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+            >
+              <div className="w-10 h-10 rounded-full bg-yellow-400/20 flex items-center justify-center">
+                <MessageCircle className="text-yellow-400 w-5 h-5" />
+              </div>
+              <div>
+                <p className="text-xs text-white/60 font-medium">Agendamentos</p>
+                <p className="text-sm font-bold">3 novos hoje</p>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Text Content - Right Column (Desktop) */}
+        <div className="flex-1 glass-card p-8 md:p-12">
+          <h2 className="text-2xl md:text-2xl font-black leading-tight mb-6">
+            SOBRE O MÉTODO INSTA DESCOMPLICADO
+          </h2>
+          <p className="text-sl text-white/70 font-medium leading-relaxed mb-6">
+            O <span class="font-bold">Insta Descomplicado</span> não é apenas mais um curso de Instagram. É um método comprovado para profissionais que estão cansadas de postar "diquinhas" e querem um <span class="font-bold">perfil lucrativo</span> que venda sozinho. Enquanto outros focam em curtidas vazias, aqui você configura seu perfil para ser uma <span class="font-bold">máquina de vendas automática</span> usando apenas o seu celular.
+          </p>
+
+          <ul className="space-y-4 mb-8">
+            {objectionList.map((item, idx) => (
+              <li key={idx} className="flex items-start gap-3">
+                <CheckCircle2 className="text-green-400 w-6 h-6 shrink-0 mt-1" />
+                <p className="text-white/70 font-medium">{item}</p>
+              </li>
+            ))}
+          </ul>
+
+          <p className="text-sl text-white/70 font-medium leading-relaxed">
+            O Insta Descomplicado é hoje indispensável para quem deseja destravar o faturamento da sua clínica ou serviço através de um perfil que trabalha 24h por dia por você. É o passo a passo exato para quem não tem tempo a perder e quer <span class="font-bold">resultados em menos de 7 dias</span>.
+          </p>
+          <p className="text-sl text-white/70 font-medium leading-relaxed mt-4">
+            Sem essa arquitetura, você está apenas perdendo tempo e dinheiro no orgânico. Simples assim.
+          </p>
+        </div>
       </div>
     </section>
   );
