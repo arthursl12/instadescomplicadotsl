@@ -292,7 +292,7 @@ function InstructorAuthoritySection() {
                style={{ boxShadow: '0 0 40px rgba(157, 80, 187, 0.8)' }} // Glow effect
           >
             <img
-              src="https://images.unsplash.com/photo-1599566150163-29194d6b4890?q=80&w=800&auto=format&fit=crop" // Placeholder for Arthur's professional photo
+              src="static/arthur_prof.jpeg"
               alt="Arthur - Estrategista de Performance"
               className="w-full h-auto object-cover"
               referrerPolicy="no-referrer"
