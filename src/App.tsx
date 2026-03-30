@@ -168,8 +168,19 @@ function HeroSection() {
 }
 
 function SocialProofSection() {
+  const feedbackImages = [
+    'static/feed1.png',
+    'static/feed2.png',
+    'static/feed3.png',
+    'static/feed4.png',
+    'static/feed5.png'
+  ];
+
+  // Duplicate images for seamless infinite scroll
+  const carouselImages = [...feedbackImages, ...feedbackImages, ...feedbackImages];
+
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto">
+    <section className="py-20 px-0 overflow-hidden">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
           O que acontece quando você para de postar 'diquinhas' e aplica o método...
@@ -179,32 +190,22 @@ function SocialProofSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {[1, 2, 3].map((i) => (
-          <motion.div
-            key={i}
-            className="glass-card p-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 overflow-hidden">
-                <img src={`https://picsum.photos/seed/user${i}/100/100`} alt="User" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-              </div>
-              <div>
-                <p className="font-bold">Aluna Essentia</p>
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, j) => <Star key={j} className="w-3 h-3 fill-current" />)}
-                </div>
-              </div>
+      <div className="relative w-full">
+        {/* Continuous scrolling carousel */}
+        <div className="flex gap-6 animate-scroll">
+          {carouselImages.map((src, index) => (
+            <div
+              key={`${src}-${index}`}
+              className="flex-shrink-0 w-[280px] md:w-[320px]"
+            >
+              <img
+                src={src}
+                alt={`Resultado ${index + 1}`}
+                className="w-full h-auto rounded-xl border border-white/10 shadow-lg"
+              />
             </div>
-            <p className="text-white/80 text-sm leading-relaxed italic">
-              "Eu passava horas no Canva fazendo posts que ninguém comentava. Depois que apliquei a Arquitetura de Conversão, meu Direct não para. Fechei 5 novos pacotes só essa semana!"
-            </p>
-          </motion.div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

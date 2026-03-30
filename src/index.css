@@ -25,6 +25,13 @@
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-320px * 5 - 30px)); }
+  }
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
 }
 
 body {
