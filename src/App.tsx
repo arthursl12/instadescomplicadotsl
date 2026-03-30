@@ -710,15 +710,16 @@ function OfferSection() {
           <p className="text-white/80">ou apenas R$ 97,00 à vista</p>
         </div>
 
-        <motion.button
+        <motion.a
+          href="https://pay.kiwify.com.br/el1GyoC"
           className="w-full md:w-auto px-10 py-6 text-xl cta-gradient animate-pulse mx-auto flex items-center justify-center gap-3"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           SIM! QUERO ACESSO IMEDIATO POR R$ 97
           <Rocket className="w-6 h-6" />
-        </motion.button>
-        
+        </motion.a>
+
         <div className="mt-8 flex items-center justify-center gap-2 text-white/50 text-sm">
           <ShieldCheck className="w-4 h-4" />
           Compra 100% Segura e Acesso Imediato
