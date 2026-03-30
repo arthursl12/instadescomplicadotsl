@@ -99,7 +99,7 @@ function HeroSection() {
       >
         <div className="relative rounded-[2.5rem] p-2 bg-gradient-to-br from-white/20 to-white/5 border border-white/10 shadow-2xl">
           <img
-            src="/resources/hero2.jpeg"
+            src="./resources/hero2.jpeg"
             alt="Instagram Profile Mockup"
             className="rounded-[2rem] w-full object-cover aspect-[9/16]"
             referrerPolicy="no-referrer"
@@ -169,11 +169,11 @@ function HeroSection() {
 
 function SocialProofSection() {
   const feedbackImages = [
-    '/resources/feed1.png',
-    '/resources/feed2.png',
-    '/resources/feed3.png',
-    '/resources/feed4.png',
-    '/resources/feed5.png'
+    './resources/feed1.png',
+    './resources/feed2.png',
+    './resources/feed3.png',
+    './resources/feed4.png',
+    './resources/feed5.png'
   ];
 
   // Duplicate images for seamless infinite scroll
@@ -236,7 +236,7 @@ function AboutMethodSection() {
           >
             {/* Placeholder for iPhone screen */}
             <img
-              src="/resources/sobre.jpeg"
+              src="./resources/sobre.jpeg"
               alt="iPhone Mockup - Optimized Instagram Profile"
               className="rounded-[2rem] w-full object-cover aspect-[3/4]"
               referrerPolicy="no-referrer"
@@ -338,7 +338,7 @@ function InstructorAuthoritySection() {
                style={{ boxShadow: '0 0 40px rgba(157, 80, 187, 0.8)' }} // Glow effect
           >
             <img
-              src="/resources/arthur_prof.jpeg"
+              src="./resources/arthur_prof.jpeg"
               alt="Arthur - Estrategista de Performance"
               className="w-full h-auto object-cover"
               referrerPolicy="no-referrer"
