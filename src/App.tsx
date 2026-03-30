@@ -183,7 +183,7 @@ function SocialProofSection() {
     <section className="py-20 px-0 overflow-hidden">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
-          O que acontece quando você para de postar 'diquinhas' e aplica o método...
+          O que acontece quando você para de postar 'diquinhas' e <span className="gradient-text">aplica o método</span>...
         </h2>
         <p className="text-white/60 text-lg">
           Resultados reais de quem saiu da confusão do algoritmo para o lucro real.
