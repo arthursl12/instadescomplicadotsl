@@ -169,11 +169,11 @@ function HeroSection() {
 
 function SocialProofSection() {
   const feedbackImages = [
-    'static/feed1.png',
-    'static/feed2.png',
-    'static/feed3.png',
-    'static/feed4.png',
-    'static/feed5.png'
+    '/static/feed1.png',
+    '/static/feed2.png',
+    '/static/feed3.png',
+    '/static/feed4.png',
+    '/static/feed5.png'
   ];
 
   // Duplicate images for seamless infinite scroll
@@ -236,7 +236,7 @@ function AboutMethodSection() {
           >
             {/* Placeholder for iPhone screen */}
             <img
-              src="static/sobre.jpeg"
+              src="/static/sobre.jpeg"
               alt="iPhone Mockup - Optimized Instagram Profile"
               className="rounded-[2rem] w-full object-cover aspect-[3/4]"
               referrerPolicy="no-referrer"
@@ -338,7 +338,7 @@ function InstructorAuthoritySection() {
                style={{ boxShadow: '0 0 40px rgba(157, 80, 187, 0.8)' }} // Glow effect
           >
             <img
-              src="static/arthur_prof.jpeg"
+              src="/static/arthur_prof.jpeg"
               alt="Arthur - Estrategista de Performance"
               className="w-full h-auto object-cover"
               referrerPolicy="no-referrer"
