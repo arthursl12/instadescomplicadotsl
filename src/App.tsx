@@ -33,6 +33,7 @@ import {
 export default function App() {
   return (
     <div className="min-h-screen bg-[#050505] text-white selection:bg-[#9D50BB]/30">
+      <HeaderBar />
       {/* Nebula Background */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-screen"></div>
@@ -52,6 +53,14 @@ export default function App() {
         <FAQSection />
         <Footer />
       </div>
+    </div>
+  );
+}
+
+function HeaderBar() {
+  return (
+    <div className="bg-[#9D50BB] text-white py-2 px-4 text-center text-[13px] md:text-sm font-medium relative z-50">
+      🔥 Oferta especial: <span className="line-through decoration-white decoration-2">R$ 197</span> apenas <span className="font-bold">R$ 97</span> por tempo limitado — Acesso imediato após a compra
     </div>
   );
 }
