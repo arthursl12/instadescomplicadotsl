@@ -502,6 +502,45 @@ function MechanismSection() {
           </ul>
         </motion.div>
       </div>
+
+      <div className="pillars">
+        <div className="pillar-card">
+          <div className="pillar-num">01</div>
+          <div className="text-3xl mb-4">🎯</div>
+          <h4 className="text-xl font-bold mb-3">Perfil com Intenção de Compra</h4>
+          <p className="text-white/60 text-sm leading-relaxed">
+            Configure sua bio e feed para atrair apenas quem realmente tem potencial de se tornar seu cliente, filtrando os curiosos de forma automática.
+          </p>
+        </div>
+
+        <div className="pillar-card">
+          <div className="pillar-num">02</div>
+          <div className="text-3xl mb-4">⚡</div>
+          <h4 className="text-xl font-bold mb-3">Método Copiar e Colar</h4>
+          <p className="text-white/60 text-sm leading-relaxed">
+            Tenha acesso a fórmulas prontas de posts validados que economizam seu tempo e eliminam o bloqueio criativo na hora de produzir conteúdo.
+          </p>
+        </div>
+
+        <div className="pillar-card">
+          <div className="pillar-num">03</div>
+          <div className="text-3xl mb-4">🔄</div>
+          <h4 className="text-xl font-bold mb-3">Arquitetura de Conversão 24h</h4>
+          <p className="text-white/60 text-sm leading-relaxed">
+            Transforme seu perfil em um funil automático que trabalha por você 24 horas por dia, levando o seguidor diretamente para o agendamento.
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-[50px] flex justify-center">
+        <motion.a
+          href="#oferta"
+          className="cta-gradient px-8 py-5 text-lg animate-cta-glow flex items-center gap-2"
+          whileTap={{ scale: 0.95 }}
+        >
+          Quero a Arquitetura de Conversão Automática →
+        </motion.a>
+      </div>
     </section>
   );
 }
