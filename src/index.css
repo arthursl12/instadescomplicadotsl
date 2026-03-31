@@ -16,7 +16,23 @@
     @apply bg-gradient-to-r from-[#00D2FF] to-[#9D50BB] text-transparent bg-clip-text;
   }
   .cta-gradient {
-    @apply bg-gradient-to-br from-[#00D2FF] to-[#9D50BB] text-white font-bold rounded-2xl transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(157,80,187,0.4)];
+    @apply bg-gradient-to-br from-[#00D2FF] to-[#9D50BB] text-white font-bold rounded-2xl transition-all duration-[0.15s] shadow-[0_0_20px_rgba(157,80,187,0.4)];
+  }
+  .cta-gradient:hover {
+    @apply -translate-y-[2px] brightness-95 shadow-[0_12px_40px_rgba(157,80,187,0.35)];
+  }
+  @keyframes cta-pulse-glow {
+    0%, 100% {
+      filter: brightness(1);
+      box-shadow: 0 5px 15px rgba(157, 80, 187, 0.3);
+    }
+    50% {
+      filter: brightness(0.9);
+      box-shadow: 0 12px 40px rgba(157, 80, 187, 0.6);
+    }
+  }
+  .animate-cta-glow {
+    animation: cta-pulse-glow 2s ease-in-out infinite;
   }
   @keyframes float {
     0%, 100% { transform: translateY(0); }

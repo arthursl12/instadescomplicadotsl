@@ -75,7 +75,7 @@ function HeroSection() {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-sm font-bold tracking-widest uppercase mb-6 text-white/80">
-            INSTA DESCOMPLICADO
+            [ INSTA DESCOMPLICADO ]
           </span>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-normal leading-[1.1] mb-6">
             ALCANCE DE <span className="gradient-text">1.055 A 3.028 NOVOS SEGUIDORES</span> EM 4 SEMANAS{' '}
@@ -88,15 +88,20 @@ function HeroSection() {
             Para profissionais que estão cansadas de postar "diquinhas" e querem um perfil lucrativo que venda sozinho.
           </p>
 
-          <motion.a
-            href="#oferta"
-            className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-5 text-lg cta-gradient animate-pulse"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            QUERO MEU PERFIL LUCRATIVO AGORA
-            <Zap className="ml-2 w-5 h-5" />
-          </motion.a>
+          <div className="inline-flex flex-col items-center">
+            <motion.a
+              href="#oferta"
+              className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-5 text-lg cta-gradient animate-cta-glow"
+              whileTap={{ scale: 0.95 }}
+            >
+              QUERO MEU PERFIL LUCRATIVO AGORA
+              <Zap className="ml-2 w-5 h-5" />
+            </motion.a>
+            
+            <p className="mt-3 text-[#888] text-[0.78rem] font-normal tracking-wide text-center">
+              🔒 Acesso imediato · Garantia de 7 dias
+            </p>
+          </div>
         </motion.div>
       </div>
 
@@ -721,7 +726,7 @@ function OfferSection() {
 
         <motion.a
           href="https://pay.kiwify.com.br/el1GyoC"
-          className="w-full md:w-auto px-10 py-6 text-xl cta-gradient animate-pulse mx-auto flex items-center justify-center gap-3"
+          className="w-full md:w-auto px-10 py-6 text-xl cta-gradient animate-cta-glow mx-auto flex items-center justify-center gap-3"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
