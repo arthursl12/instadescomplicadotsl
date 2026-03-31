@@ -197,7 +197,7 @@ function SocialProofSection() {
     <section className="py-20 px-0 overflow-hidden">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
-          O que acontece quando você para de postar 'diquinhas' e <span className="gradient-text">aplica o método</span>...
+          O que estão dizendo sobre <span className="gradient-text">Insta Descomplicado</span>...
         </h2>
         <p className="text-white/60 text-lg">
           Resultados reais de quem saiu da confusão do algoritmo para o lucro real.
@@ -406,10 +406,11 @@ function MechanismSection() {
     <section className="py-20 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
-          Por que o seu Instagram atual não vende?
+          O PROBLEMA NÃO É VOCÊ.<br/>
+          <span className="gradient-text">É O MÉTODO ERRADO.</span>
         </h2>
         <p className="text-white/60 text-lg">
-          Entenda a diferença entre ser escravo do algoritmo e ter uma máquina de vendas.
+          Chega de tentar entender o algoritmo. A maioria das profissionais está seguindo conselhos que atraem curtidas — não clientes.
         </p>
       </div>
 
@@ -424,20 +425,28 @@ function MechanismSection() {
           <div className="absolute top-0 left-0 w-full h-1 bg-red-500/50"></div>
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-3 text-white/90">
             <XCircle className="text-red-500 w-8 h-8" />
-            Por que você não vende?
+            Jeito Errado (o que você já tentou)
           </h3>
           <ul className="space-y-6">
             <li className="flex items-start gap-4">
               <div className="mt-1 min-w-[24px]"><XCircle className="text-red-500/70 w-6 h-6" /></div>
-              <p className="text-white/70">Tenta entender o algoritmo e atrair apenas curiosos que nunca compram.</p>
+              <p className="text-white/70">Ficar confusa tentando entender o algoritmo e postar conteúdo que só atrai curiosos</p>
             </li>
             <li className="flex items-start gap-4">
               <div className="mt-1 min-w-[24px]"><XCircle className="text-red-500/70 w-6 h-6" /></div>
-              <p className="text-white/70">Gasta horas no Canva criando artes complexas que ninguém vê.</p>
+              <p className="text-white/70">Gastar horas no Canva criando artes complexas que ninguém vê</p>
             </li>
             <li className="flex items-start gap-4">
               <div className="mt-1 min-w-[24px]"><XCircle className="text-red-500/70 w-6 h-6" /></div>
-              <p className="text-white/70">É refém de "posts editáveis" bonitinhos, mas zero lucro.</p>
+              <p className="text-white/70">Depender de "dancinhas" e tendências passageiras para crescer</p>
+            </li>
+            <li className="flex items-start gap-4">
+              <div className="mt-1 min-w-[24px]"><XCircle className="text-red-500/70 w-6 h-6" /></div>
+              <p className="text-white/70">Não saber como levar o seguidor do feed para o WhatsApp</p>
+            </li>
+            <li className="flex items-start gap-4">
+              <div className="mt-1 min-w-[24px]"><XCircle className="text-red-500/70 w-6 h-6" /></div>
+              <p className="text-white/70">Achar que precisa viralizar para vender (e nunca vender)</p>
             </li>
           </ul>
         </motion.div>
@@ -452,7 +461,7 @@ function MechanismSection() {
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#00D2FF] to-[#9D50BB]"></div>
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-3 text-white">
             <CheckCircle2 className="text-green-400 w-8 h-8" />
-            Com o Insta Descomplicado
+            Jeito Certo (Conversão Automática)
           </h3>
           {/* <p className="text-[#00D2FF] font-bold mb-6">Apresentamos a Arquitetura de Conversão Automática</p> */}
           <ul className="space-y-6">
@@ -460,21 +469,32 @@ function MechanismSection() {
               <div className="mt-1 min-w-[24px]"><CheckCircle2 className="text-green-400 w-6 h-6" /></div>
               <div>
                 
-                <p className="text-white/70"><strong className="text-white mb-1">Foco em Intenção de Compra:</strong> não buscamos curtidas vazias, mas seguidores que já querem seu serviço.</p>
+                <p className="text-white/70">Perfil e posts focados em intenção de compra, não apenas em curtidas vazias</p>
               </div>
             </li>
             <li className="flex items-start gap-4">
               <div className="mt-1 min-w-[24px]"><CheckCircle2 className="text-green-400 w-6 h-6" /></div>
               <div>
                 
-                <p className="text-white/70"><strong className="text-white mb-1">Efeito Bola de Neve:</strong> o algoritmo passa a trabalhar para você, não o contrário.</p>
+                <p className="text-white/70">Método simples de construção de posts focado no que você fala, não no design</p>
               </div>
             </li>
             <li className="flex items-start gap-4">
               <div className="mt-1 min-w-[24px]"><CheckCircle2 className="text-green-400 w-6 h-6" /></div>
               <div>
-                
-                <p className="text-white/70"><strong className="text-white mb-1">Copie e Cole:</strong> esqueça a criação do zero; use o que já foi validado.</p>
+                <p className="text-white/70">Fazer o algoritmo trabalhar para você, atraindo quem já quer o serviço</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-4">
+              <div className="mt-1 min-w-[24px]"><CheckCircle2 className="text-green-400 w-6 h-6" /></div>
+              <div>
+                <p className="text-white/70">Ganhar agendamentos com a "Arquitetura de Conversão Automática" configurada no perfil</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-4">
+              <div className="mt-1 min-w-[24px]"><CheckCircle2 className="text-green-400 w-6 h-6" /></div>
+              <div>
+                <p className="text-white/70">Ganhar muito dinheiro com o "efeito bola de neve" sem precisar viralizar</p>
               </div>
             </li>
           </ul>
