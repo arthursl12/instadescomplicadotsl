@@ -548,24 +548,28 @@ function MechanismSection() {
 function ModulesSection() {
   const modules = [
     {
-      icon: <Target className="w-8 h-8 text-[#00D2FF]" />,
-      title: "Bio Irresistível",
-      desc: "Configure seu perfil para converter visitantes em clientes em segundos."
+      title: "🔍 Diagnóstico do Perfil",
+      desc: "Identifique os 3 erros invisíveis que fazem visitantes ir embora sem agendar — e corrija em menos de 1 hora."
     },
     {
-      icon: <Play className="w-8 h-8 text-[#9D50BB]" />,
-      title: "Destaques Estratégicos",
-      desc: "Crie uma trilha de vendas que trabalha 24h por dia para você."
+      title: "⚙️ Arquitetura de Conversão",
+      desc: "Configure Bio, Destaques e Feed como um funil automatizado que trabalha por você enquanto você atende clientes."
     },
     {
-      icon: <Instagram className="w-8 h-8 text-yellow-400" />,
-      title: "Feed com Intenção",
-      desc: "Aprenda a postar conteúdos que geram desejo imediato pelo seu serviço."
+      title: "📝 Fórmula de Posts que Vendem",
+      desc: "Domine os 5 tipos de posts que atraem seguidores com intenção de compra — e descubra por que o design não importa tanto quanto você pensa."
     },
     {
-      icon: <MessageCircle className="w-8 h-8 text-green-400" />,
-      title: "O Script do Direct",
-      desc: "Como levar o seguidor do feed para o WhatsApp de forma automática."
+      title: "💬 Direct → Agendamento",
+      desc: "Scripts prontos para transformar toda mensagem no Direct em consulta agendada — sem precisar 'vender' ou parecer desesperada."
+    },
+    {
+      title: "📈 Efeito Bola de Neve",
+      desc: "Ative o ciclo de crescimento orgânico que gera cada vez mais seguidores qualificados sem aumentar o tempo que você gasta no Instagram."
+    },
+    {
+      title: "🚀 Plano de 4 Semanas",
+      desc: "Um cronograma dia a dia para ir de perfil estagnado a máquina de agendamentos — sem improvisar, sem ficar perdida."
     }
   ];
 
@@ -576,30 +580,29 @@ function ModulesSection() {
           O que você vai aprender
         </p>
         
-        
         <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
           TUDO QUE VOCÊ PRECISA PARA TRANSFORMAR SEU PERFIL EM MÁQUINA DE AGENDAMENTOS        
-          </h2>
-        
+        </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="modules-grid">
         {modules.map((mod, idx) => (
-          <motion.div
-            key={idx}
-            className="glass-card p-8 hover:bg-white/5 transition-colors duration-300 group cursor-default"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: idx * 0.1 }}
-          >
-            <div className="mb-6 p-4 rounded-2xl bg-white/5 inline-block group-hover:scale-110 transition-transform duration-300">
-              {mod.icon}
-            </div>
-            <h3 className="text-xl font-bold mb-3">Módulo 0{idx + 1}: {mod.title}</h3>
-            <p className="text-white/60 leading-relaxed">{mod.desc}</p>
-          </motion.div>
+          <div key={idx} className="module-card">
+            <h3 className="text-[#00D2FF] font-black text-lg mb-4 uppercase tracking-wider">Módulo 0{idx + 1}</h3>
+            <h4 className="text-xl font-bold mb-3 text-white">{mod.title}</h4>
+            <p className="text-white/60 leading-relaxed text-sm">{mod.desc}</p>
+          </div>
         ))}
+      </div>
+
+      <div className="mt-12 flex justify-center">
+        <motion.a
+          href="#oferta"
+          className="cta-gradient px-8 py-5 text-lg animate-cta-glow flex items-center gap-2"
+          whileTap={{ scale: 0.95 }}
+        >
+          Quero Acesso aos 6 Módulos Agora →
+        </motion.a>
       </div>
     </section>
   );

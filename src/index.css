@@ -60,6 +60,12 @@
     font-family: 'Bebas Neue', sans-serif;
     @apply absolute top-[10px] right-[20px] text-[6rem] text-white/5 select-none leading-none;
   }
+  .modules-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-[20px] items-stretch auto-rows-fr;
+  }
+  .module-card {
+    @apply p-[30px] rounded-2xl bg-[var(--color-gray-mid)] border border-white/5 transition-all duration-300 hover:border-[#00D2FF]/30 h-full flex flex-col;
+  }
 }
 
 .social-proof h2,
