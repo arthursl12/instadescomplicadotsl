@@ -194,11 +194,12 @@ function SocialProofSection() {
   const carouselImages = [...feedbackImages, ...feedbackImages, ...feedbackImages];
 
   return (
-    <section className="py-20 px-0 overflow-hidden">
-      <div className="text-center mb-16">
+    <section className="py-20 px-0 overflow-hidden social-proof">
+      <div className="text-center mb-16 px-6">
         <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
           O que estão dizendo sobre <span className="gradient-text">Insta Descomplicado</span>...
         </h2>
+
         <p className="text-white/60 text-lg">
           Resultados reais de quem saiu da confusão do algoritmo para o lucro real.
         </p>
@@ -403,9 +404,10 @@ function InstructorAuthoritySection() {
 
 function MechanismSection() {
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto">
+    <section className="py-20 px-6 max-w-7xl mx-auto mechanism">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
+
           O PROBLEMA NÃO É VOCÊ.<br/>
           <span className="gradient-text">É O MÉTODO ERRADO.</span>
         </h2>
@@ -529,14 +531,17 @@ function ModulesSection() {
   ];
 
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto">
+    <section className="py-20 px-6 max-w-7xl mx-auto modules">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
-          O que você vai aprender no <span className="gradient-text">Insta Descomplicado</span>
-        </h2>
         <p className="text-white/60 text-lg">
-          O passo a passo exato para transformar seu perfil.
+          O que você vai aprender
         </p>
+        
+        
+        <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
+          TUDO QUE VOCÊ PRECISA PARA TRANSFORMAR SEU PERFIL EM MÁQUINA DE AGENDAMENTOS        
+          </h2>
+        
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -596,7 +601,7 @@ function TargetAudienceSection() {
   ];
 
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto text-center">
+    <section className="py-20 px-6 max-w-7xl mx-auto text-center target">
       <h2 className="text-3xl md:text-4xl font-black tracking-tighter mb-4">
         PARA QUEM É O <span className="gradient-text">INSTA DESCOMPLICADO</span>?
       </h2>
@@ -844,3 +849,4 @@ function Footer() {
     </footer>
   );
 }
+

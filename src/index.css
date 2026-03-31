@@ -50,6 +50,16 @@
   }
 }
 
+.social-proof h2,
+.mechanism h2,
+.modules h2,
+.target h2 {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.1;
+}
+
 body {
   background-color: #050505;
   color: white;
