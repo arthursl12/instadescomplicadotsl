@@ -67,7 +67,7 @@ function HeaderBar() {
 
 function HeroSection() {
   return (
-    <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+    <section className="relative pt-12 pb-16 md:pt-16 md:pb-24 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
       <div className="flex-1 text-center lg:text-left">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
